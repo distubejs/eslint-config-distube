@@ -14,6 +14,7 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": 0,
     "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/quotes": ["error", "double"],
     "@typescript-eslint/require-await": "error",
     "arrow-parens": ["error", "as-needed"],
     curly: ["error", "multi-line", "consistent"],
@@ -28,7 +29,6 @@ module.exports = {
     ],
     "no-multi-spaces": "error",
     "prefer-template": "error",
-    quotes: ["error", "double"],
     "sort-imports": [
       "warn",
       {
