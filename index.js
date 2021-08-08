@@ -1,57 +1,25 @@
 module.exports = {
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "jsdoc"],
-  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
-  parserOptions: {
-    ecmaVersion: 11,
-    sourceType: "module",
-  },
   env: {
     es6: true,
     node: true,
   },
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: 11,
+    sourceType: "module",
+  },
+  plugins: ["@typescript-eslint", "jsdoc"],
   rules: {
-    "no-console": "error",
-    "sort-imports": [
-      "warn",
-      {
-        ignoreDeclarationSort: true,
-      },
-    ],
-    "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/no-unused-vars": "error",
-    "prefer-template": "error",
-    "space-before-function-paren": ["error", {
-      "anonymous": "always",
-      "named": "never",
-      "asyncArrow": "always"
-    }],
+    "@typescript-eslint/require-await": "error",
+    "arrow-parens": ["error", "as-needed"],
+    curly: ["error", "multi-line", "consistent"],
     "jsdoc/check-tag-names": "warn",
     "jsdoc/check-types": "warn",
-    "valid-jsdoc": [
-      "warn",
-      {
-        requireReturn: false,
-        requireReturnDescription: false,
-        prefer: {
-          return: "returns",
-          arg: "param",
-        },
-        preferType: {
-          String: "string",
-          Number: "number",
-          Boolean: "boolean",
-          Symbol: "symbol",
-          object: "Object",
-          function: "Function",
-          array: "Array",
-          date: "Date",
-          error: "Error",
-          null: "void",
-        },
-      },
-    ],
+    "no-console": "error",
     "no-empty": [
       "error",
       {
@@ -59,19 +27,52 @@ module.exports = {
       },
     ],
     "no-multi-spaces": "error",
-    "arrow-parens": ["error", "as-needed"],
-    curly: ["error", "multi-line", "consistent"],
+    "prefer-template": "error",
     quotes: ["error", "double"],
+    "sort-imports": [
+      "warn",
+      {
+        ignoreDeclarationSort: true,
+      },
+    ],
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "asyncArrow": "always",
+      "named": "never"
+    }],
+    "valid-jsdoc": [
+      "warn",
+      {
+        prefer: {
+          arg: "param",
+          return: "returns",
+        },
+        preferType: {
+          Boolean: "boolean",
+          Number: "number",
+          String: "string",
+          Symbol: "symbol",
+          array: "Array",
+          date: "Date",
+          error: "Error",
+          function: "Function",
+          null: "void",
+          object: "Object",
+        },
+        requireReturn: false,
+        requireReturnDescription: false,
+      },
+    ],
   },
   settings: {
     jsdoc: {
-      tagNamePreference: {
-        property: "prop",
-        augments: "extends",
-        function: "method",
-      },
       preferredTypes: {
         object: "Object",
+      },
+      tagNamePreference: {
+        augments: "extends",
+        function: "method",
+        property: "prop",
       },
     },
   },

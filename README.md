@@ -1,2 +1,3 @@
 # eslint-config-distube
- Shareable TS ESLint config for DisTube
+
+Shareable TS ESLint config for DisTube

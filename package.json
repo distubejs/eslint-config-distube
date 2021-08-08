@@ -4,8 +4,9 @@
   "description": "Shareable TS ESLint config for DisTube",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint index.js",
-    "prettier": "prettier --write index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier --write **/*.{js,ts,json,yml,yaml,md}",
     "npm:publish": "npm publish --access public"
   },
   "author": "Skick",
