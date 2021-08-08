@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-distube",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Shareable TS ESLint config for DisTube",
   "main": "index.js",
   "scripts": {
