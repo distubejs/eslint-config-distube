@@ -6,13 +6,15 @@ module.exports = {
   extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 11,
+    ecmaVersion: 2021,
     sourceType: "module",
   },
   plugins: ["@typescript-eslint", "jsdoc"],
   rules: {
-    "@typescript-eslint/explicit-module-boundary-types": 0,
-    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-require-imports": "error",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/quotes": ["error", "double", {
       "avoidEscape": true
