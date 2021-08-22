@@ -16,14 +16,28 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-require-imports": "error",
     "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/quotes": ["error", "double", {
-      "avoidEscape": true
-    }],
+    "@typescript-eslint/quotes": [
+      "error",
+      "double",
+      {
+        avoidEscape: true,
+      },
+    ],
     "@typescript-eslint/require-await": "error",
     "arrow-parens": ["error", "as-needed"],
     curly: ["error", "multi-line", "consistent"],
+    "eol-last": "error",
     "jsdoc/check-tag-names": "warn",
     "jsdoc/check-types": "warn",
+    "linebreak-style": "error",
+    "max-len": [
+      "error",
+      {
+        code: 120,
+        ignoreRegExpLiterals: true,
+        ignoreUrls: true,
+      },
+    ],
     "no-console": "error",
     "no-empty": [
       "error",
@@ -39,11 +53,14 @@ module.exports = {
         ignoreDeclarationSort: true,
       },
     ],
-    "space-before-function-paren": ["error", {
-      "anonymous": "always",
-      "asyncArrow": "always",
-      "named": "never"
-    }],
+    "space-before-function-paren": [
+      "error",
+      {
+        anonymous: "always",
+        asyncArrow: "always",
+        named: "never",
+      },
+    ],
     "valid-jsdoc": [
       "warn",
       {
