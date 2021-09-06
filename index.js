@@ -46,6 +46,7 @@ module.exports = {
       },
     ],
     "no-multi-spaces": "error",
+    "no-multiple-empty-lines": ["error", { max: 2, maxEOF: 0 }],
     "prefer-template": "error",
     "sort-imports": [
       "warn",
