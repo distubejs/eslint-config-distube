@@ -3,7 +3,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier", "deprecation"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2021,
@@ -26,6 +26,7 @@ module.exports = {
     "@typescript-eslint/require-await": "error",
     "arrow-parens": ["error", "as-needed"],
     curly: ["error", "multi-line", "consistent"],
+    "deprecation/deprecation": "warn",
     "eol-last": "error",
     "jsdoc/check-tag-names": "warn",
     "jsdoc/check-types": "warn",
