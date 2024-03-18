@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-distube",
-  "version": "1.6.5",
+  "version": "1.7.0",
   "description": "Shareable TS ESLint config for DisTube",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,9 @@
     "prettier": "prettier --write **/*.{js,ts,json,yml,yaml,md}",
     "npm:publish": "npm publish --access public"
   },
+  "files": [
+    "index.js"
+  ],
   "author": "Skick",
   "license": "MIT",
   "devDependencies": {
