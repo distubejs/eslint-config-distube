@@ -9,7 +9,7 @@ module.exports = {
     ecmaVersion: 2021,
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "jsdoc", "deprecation"],
+  plugins: ["@typescript-eslint", "deprecation"],
   rules: {
     "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/explicit-module-boundary-types": "off",
@@ -28,8 +28,6 @@ module.exports = {
     curly: ["error", "multi-line", "consistent"],
     "deprecation/deprecation": "warn",
     "eol-last": "error",
-    "jsdoc/check-tag-names": "warn",
-    "jsdoc/check-types": "warn",
     "linebreak-style": "error",
     "max-len": [
       "error",
@@ -63,40 +61,5 @@ module.exports = {
         named: "never",
       },
     ],
-    "valid-jsdoc": [
-      "warn",
-      {
-        prefer: {
-          arg: "param",
-          return: "returns",
-        },
-        preferType: {
-          Boolean: "boolean",
-          Number: "number",
-          String: "string",
-          Symbol: "symbol",
-          array: "Array",
-          date: "Date",
-          error: "Error",
-          function: "Function",
-          null: "void",
-          object: "Object",
-        },
-        requireReturn: false,
-        requireReturnDescription: false,
-      },
-    ],
-  },
-  settings: {
-    jsdoc: {
-      preferredTypes: {
-        object: "Object",
-      },
-      tagNamePreference: {
-        augments: "extends",
-        function: "method",
-        property: "prop",
-      },
-    },
   },
 };
